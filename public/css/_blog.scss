@@ -1,0 +1,12 @@
+.blog{
+    .post{
+        background-color: rgba(0, 0, 0, 0.3);
+        .picture{
+            img{
+                width: 100%;
+                object-fit: cover;
+                height: 400px;
+            }
+        }
+    }
+}

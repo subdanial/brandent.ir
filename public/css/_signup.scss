@@ -1,0 +1,99 @@
+
+.signup {
+    .back {
+        bottom: 1.5rem;
+        left: 1.5rem;
+        position: fixed;
+        height: 38px;
+        width: 38px;
+        cursor: pointer;
+        z-index: 1;
+
+        svg {
+            height: 38px;
+            fill: $blue !important;
+        }
+    }
+
+    .intro {
+        .background {
+            img {
+                width: 100%;
+            }
+        }
+
+        .content {
+            .title {
+                color: $black;
+                font-size: 2rem;
+                font-weight: 900;
+            }
+
+            .subtitle {
+                color: $black;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+
+ 
+    .signup {
+        .back {
+            top: 1.5rem;
+            left: 1.5rem;
+            position: fixed;
+            height: 38px;
+            width: 38px;
+            cursor: pointer;
+            z-index: 1;
+
+            svg {
+                height: 38px;
+                fill: white !important;
+            }
+        }
+
+        .intro {
+
+            .back {
+                svg {
+                    fill: $blue !important;
+                }
+            }
+
+            .background {
+                img {
+                    position: fixed;
+                    height: 100vh;
+                    width: inherit !important;
+                    top: 0;
+                    right: 0;
+                    background: inherit;
+                }
+            }
+
+            .content {
+
+
+                .title {
+                    color: $black;
+                    font-size: 2.5rem !important;
+                    font-weight: 900;
+                }
+
+                .subtitle {
+                    color: $black;
+                    font-size: 1.5rem !important;
+                }
+            }
+        }
+
+  
+    }
+
+}

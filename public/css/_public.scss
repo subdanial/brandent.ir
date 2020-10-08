@@ -1,0 +1,115 @@
+::selection {
+    background-color: $orange;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.close {
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+.menu-fullscreen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    z-index: 10000;
+    background-color: $black;
+
+    .items {
+        ul {
+            text-align: center !important;
+        }
+
+        ul li a {
+            color: white;
+
+            &.active {
+                color: $orange;
+            }
+        }
+    }
+
+    svg {
+        width: 32px;
+        height: 32px;
+        fill: white;
+        text-align: center;
+    }
+
+}
+
+
+.top-nav {
+    z-index: 1000;
+
+    .menu {
+        line-height: 48px;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            list-style: none;
+            display: inline;
+
+            a {
+                color: white;
+                &.active {
+                    color: $orange !important;
+                    font-weight: bold;
+                }
+                    &:hover {
+                    border-bottom: $orange 2px solid;
+                }
+            }
+        }
+    }
+
+    .logo {
+        img {
+            height: 38px;
+        }
+    }
+}
+
+@media(min-width:992px) {
+    .top-nav {
+        .logo {
+            img {
+                height: 48px;
+            }
+        }
+    }
+}
+
+body{
+    overflow-y: overlay;
+}
+body::-webkit-scrollbar {
+    width: 1em;
+    transition: 0.5s;
+    
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    // border-radius:20px;
+    background-color: $orange;
+}
+
+.at::before{
+        content: "@";
+}
