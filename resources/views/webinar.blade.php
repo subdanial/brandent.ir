@@ -66,7 +66,10 @@ bg-blue
                             <div class="card shadow hover-scale mt-3">
                                 <div class="card-body">
                                     <div class="d-flex card-title justify-content-between">
+                                    <div>
                                         <div class="name text-blue font-weight-bolder">دندان پزشکان</div>
+                                     <small class="name w-100 d-block text-blue text-right position-absolute mt-n1 font-weight-bold">ثبت نام با امتیاز</small>
+                                     </div>
                                         <div class="price text-blue font-weight-bold">250 هزار تومان</div>
                                     </div>
                                     <hr>
@@ -89,7 +92,7 @@ bg-blue
                                     <div class="d-flex card-title justify-content-between">
                                         <div>
                                             <div class="name text-blue font-weight-bolder">دندان پزشکان</div>
-                                            <small class="name w-100 d-block text-blue text-right position-absolute mt-n1 font-weight-bold">پیش ثبت نام</small>
+                                            <small class="name w-100 d-block text-blue text-right position-absolute mt-n1 font-weight-bold">ثبت نام بدون امتیاز</small>
     
                                         </div>
                                         <div class="price text-blue font-weight-bold">180 هزار تومان</div>
