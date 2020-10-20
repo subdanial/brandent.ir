@@ -293,8 +293,8 @@ $('.js-btn-back-to-plan').click(function () {
 $('.js-btn-to-info').click(function () {
     var plan = 0;
     var text = [];
-    text[0] = "پلن دندان پزشکان "+$(this).attr('data-value')+" هزارتومان";
-    text[1] = "پلن پیش ثبت نام دندان پزشکان "+$(this).attr('data-value')+" هزارتومان";
+    text[0] = " پلن دندان پزشکان با امتیاز "+$(this).attr('data-value')+" هزارتومان";
+    text[1] = "پلن دندان پزشکان بدون امتیاز "+$(this).attr('data-value')+" هزارتومان";
     text[2] = "پلن ویژه دانشجویان "+$(this).attr('data-value')+" هزارتومان";
     text[3] = "پلن عمومی "+$(this).attr('data-value')+" هزارتومان";
     var span_text;
