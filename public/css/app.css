@@ -783,4 +783,94 @@ body::-webkit-scrollbar-thumb {
     height: 100vh;
   }
 }
+
+.consulting-form {
+  direction: rtl;
+  text-align: right;
+  padding: 3.5rem;
+  border: 2px solid #FF6600;
+  border-radius: 0;
+  color: white;
+  margin-top: 4rem;
+  width: 90%;
+}
+
+@media (min-width: 992px) {
+  .consulting-form {
+    width: 70%;
+    margin-top: 0rem;
+  }
+}
+
+.consulting-form .form-control {
+  border: 1px solid #FF6600;
+  background-color: transparent;
+  color: white;
+  border-radius: 0;
+}
+
+.consulting-form .form-control::-webkit-input-placeholder {
+  color: #FF6600;
+}
+
+.consulting-form .form-control:-ms-input-placeholder {
+  color: #FF6600;
+}
+
+.consulting-form .form-control::-ms-input-placeholder {
+  color: #FF6600;
+}
+
+.consulting-form .form-control::placeholder {
+  color: #FF6600;
+}
+
+.consulting-form .form-control.ltr {
+  text-align: left;
+  direction: ltr;
+}
+
+.consulting-form .form-check {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px 10px;
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.consulting-form .form-check .form-check-input {
+  margin-left: 10px;
+}
+
+.consulting-form .form-check:not(.form-check-inline) .form-check-label {
+  margin-right: 25px;
+}
+
+.consulting-form textarea {
+  border: 1px solid #FF6600;
+  width: 100%;
+  padding: 15xpx;
+}
+
+.consulting-form h2 {
+  top: -50px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.desktop-center {
+  min-height: 89vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=app.css.map */

@@ -53,7 +53,7 @@ bg-black-mini
             <div class="sub-title text-right ">داستان خود را آغاز کنید..</div>
             <div class="buttons text-right mt-2">
                 <a href="{{route('webinar')}}" class="btn btn-orange ml-1" data-barba-prevent="self">ثبت نام در سمپوزیم</a>
-                <a href="#" class="btn btn-outline-orange">فرم دریافت مشاوره</a>
+                <a href="{{route('consulting')}}" class="btn btn-outline-orange"  data-barba-prevent="self">فرم دریافت مشاوره</a>
             </div>
         </div>
     </div>

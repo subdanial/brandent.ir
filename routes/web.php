@@ -22,6 +22,7 @@ Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/blog', 'HomeController@blog')->name('blog');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::get('/post/{post}', 'PostController@show')->name('post_show');
+Route::get('/consulting', 'HomeController@consulting')->name('consulting');
 
 Route::get('/webinar', 'HomeController@webinar')->name('webinar');
 Route::post('/payment', 'PaymentController@Payment')->name('payment');

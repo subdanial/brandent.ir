@@ -1,4 +1,3 @@
-
 function maping() {
     var myMap = new L.Map('map', {
         key: 'web.XBwlSx3YJ7iiikEV27TOTqwgPMuhUdFM7HV9sGVN',
@@ -7,7 +6,7 @@ function maping() {
         traffic: false,
         center: [35.699739, 51.338097],
         zoom: 14,
-        
+
     });
 }
 // maping();
@@ -27,6 +26,7 @@ var vb = $('.js-background img').width();
 var ch = $('.js-content').height();
 var mr_left = vw / 2 - vb;
 var mr_top = vh / 2 - ch / 2;
+
 function contentAlign() {
     win = $(window);
     vh = win.height();
@@ -149,6 +149,7 @@ function pageTransition() {
         }
     })
 }
+
 function delay(n) {
     n = n || 2000;
     return new Promise(done => {
@@ -206,21 +207,21 @@ barba.init({
         },
         {
             from: {
-                namespace: ['post','blog']
+                namespace: ['post', 'blog']
             },
             to: {
-                namespace: ['blog','post']
+                namespace: ['blog', 'post']
             },
             leave(data) {
                 return gsap.to(data.current.container, {
-                  opacity: 0
+                    opacity: 0
                 });
-              },
-              enter(data) {
+            },
+            enter(data) {
                 return gsap.from(data.next.container, {
-                  opacity: 0
+                    opacity: 0
                 });
-              }
+            }
         }
     ]
 })
@@ -230,8 +231,7 @@ $(document).ready(function () {
 });
 if (initialLoad) {
     pageTransition();
-} else {
-}
+} else {}
 //End-Transition
 $.ajaxSetup({
     headers: {
@@ -251,30 +251,22 @@ gsap.to('.js-scroll svg', {
     repeat: -1
 });
 //EndScroll
-$('.js-input-signup').on('keyup keydown',function(){
-    if(
-      $('.js-name').val() !== '' 
-      &&
-      $('.js-lastname').val() !== '' 
-      &&
-      $('.js-email').val() !== '' 
-      &&
-      $('.js-phone').val() !== '' 
-      &&
-      $('.js-code').val() !== '' 
-      &&
-      $('.js-password').val() !== '' 
-      &&
-      $('.js-password_confirmation').val() !== '' 
-      &&
-      $('.js-password').val() == $('.js-password_confirmation').val()
-    ){
-        $('.js-submit').prop('disabled',false);
-        $('.js-help-active').css('opacity','0');
-    }
-    else{
-        $('.js-submit').prop('disabled',true);
-        $('.js-help-active').css('opacity','1');
+$('.js-input-signup').on('keyup keydown', function () {
+    if (
+        $('.js-name').val() !== '' &&
+        $('.js-lastname').val() !== '' &&
+        $('.js-email').val() !== '' &&
+        $('.js-phone').val() !== '' &&
+        $('.js-code').val() !== '' &&
+        $('.js-password').val() !== '' &&
+        $('.js-password_confirmation').val() !== '' &&
+        $('.js-password').val() == $('.js-password_confirmation').val()
+    ) {
+        $('.js-submit').prop('disabled', false);
+        $('.js-help-active').css('opacity', '0');
+    } else {
+        $('.js-submit').prop('disabled', true);
+        $('.js-help-active').css('opacity', '1');
     }
 })
 //signup
@@ -293,10 +285,10 @@ $('.js-btn-back-to-plan').click(function () {
 $('.js-btn-to-info').click(function () {
     var plan = 0;
     var text = [];
-    text[0] = " پلن دندان پزشکان با امتیاز "+$(this).attr('data-value')+" هزارتومان";
-    text[1] = "پلن دندان پزشکان بدون امتیاز "+$(this).attr('data-value')+" هزارتومان";
-    text[2] = "پلن ویژه دانشجویان "+$(this).attr('data-value')+" هزارتومان";
-    text[3] = "پلن عمومی "+$(this).attr('data-value')+" هزارتومان";
+    text[0] = " پلن دندان پزشکان با امتیاز " + $(this).attr('data-value') + " هزارتومان";
+    text[1] = "پلن دندان پزشکان بدون امتیاز " + $(this).attr('data-value') + " هزارتومان";
+    text[2] = "پلن ویژه دانشجویان " + $(this).attr('data-value') + " هزارتومان";
+    text[3] = "پلن عمومی " + $(this).attr('data-value') + " هزارتومان";
     var span_text;
     var user_group_text = [];
     user_group_text[0] = 'کد نظام پزشکی';
@@ -306,11 +298,11 @@ $('.js-btn-to-info').click(function () {
     $('.info').fadeIn(600);
     plan = $(this).attr('data-plan');
     switch (plan) {
-        case'1':
+        case '1':
             span_text = text[0];
             user_group_span_text = user_group_text[0];
             break;
-        case'2':
+        case '2':
             span_text = text[1];
             user_group_span_text = user_group_text[0];
             break;
@@ -328,3 +320,46 @@ $('.js-btn-to-info').click(function () {
     $('.js-user-group').html(user_group_span_text);
 })
 //end-signup
+
+var current_data_order = 1;
+step_monitor() ;
+
+function step_monitor() {
+  
+    $('.step').each(function () {
+        if ($(this).attr('data-order') == current_data_order) {
+            $(this).show(0)
+        }else{
+            $(this).hide(0)
+        }
+    })
+
+
+    if(current_data_order == 1){
+        $('.js-btn-back').hide();
+    }else{
+        $('.js-btn-back').show();
+    }
+
+    if(current_data_order == 3){
+        $('.js-btn-submit').show();
+        $('.js-btn-next').hide();
+    }else{
+        $('.js-btn-submit').hide();
+        $('.js-btn-next').show();
+
+    }
+}
+
+
+
+$('.js-btn-next').click(function () {
+    current_data_order++;
+    step_monitor() ;
+
+})
+$('.js-btn-back').click(function () {
+    current_data_order--;
+    step_monitor() ;
+
+})

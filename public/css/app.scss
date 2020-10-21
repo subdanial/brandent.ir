@@ -13,78 +13,160 @@
 
 
 .contact {
-    .email{
-        margin-left: 8rem!important;
+    .email {
+        margin-left: 8rem !important;
     }
-    .container-fluid{
+
+    .container-fluid {
         svg {
             fill: $orange;
             width: 60px;
             height: 60px;
-    
+
             margin: auto;
             display: block;
         }
     }
- 
-    .contact-items{
-        a{
-            color:$orange!important;
+
+    .contact-items {
+        a {
+            color: $orange !important;
         }
     }
+
     #map {
         width: 100%;
         position: static;
-        top:0;
+        top: 0;
         height: 50vh;
         background: rgb(3, 3, 3);
     }
- 
+
 }
 
 @media(min-width:992px) {
     .contact {
-        .email{
-            margin-left: 8rem!important;
+        .email {
+            margin-left: 8rem !important;
         }
-        .container-fluid{
+
+        .container-fluid {
             svg {
                 fill: $orange;
                 width: 60px;
                 height: 60px;
-        
+
                 margin: auto;
                 display: block;
             }
         }
-        .contact-items{
+
+        .contact-items {
             position: static;
             bottom: 0;
             margin-top: 20vh;
-            
+
         }
+
         #map {
             width: 100%;
-            position:fixed;
-            top:0;
+            position: fixed;
+            top: 0;
             height: 100vh;
             background: rgb(3, 3, 3);
         }
-     
+
     }
-    
+
 }
 
 
 ///fix safari
-@media (min-width:992px){
-    .col-signup{
+@media (min-width:992px) {
+    .col-signup {
         height: 100vh;
     }
-    .row-plans{
+
+    .row-plans {
         height: 100vh;
     }
-    .card-desktop{
+
+    .card-desktop {
         height: 100vh;
     }
+}
+
+//consulting
+
+.consulting-form {
+    direction: rtl;
+    text-align: right;
+    padding: 3.5rem;
+    border: 2px solid $orange;
+    border-radius: 0;
+    color: $white;
+    margin-top: 4rem;
+
+    @media (min-width:992px) {
+        width: 70%;
+        margin-top: 0rem;
+    }
+
+    width: 90%;
+
+    .form-control {
+        border: 1px solid $orange;
+        background-color: transparent;
+        color: $white;
+        border-radius: 0;
+
+        &::placeholder {
+            color: $orange;
+        }
+    }
+
+    .form-control.ltr {
+        text-align: left;
+        direction: ltr;
+    }
+
+    .form-check {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 5px 10px;
+        margin-right: 0;
+        margin-left: 10px;
+
+        .form-check-input {
+            margin-left: 10px;
+        }
+
+        &:not(.form-check-inline) {
+            .form-check-label {
+                margin-right: 25px;
+            }
+        }
+    }
+
+    textarea {
+        border: 1px solid $orange;
+        width: 100%;
+        padding: 15xpx;
+    }
+
+    h2 {
+        top: -50px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        display: block;
+        width: max-content;
+    }
+}
+
+.desktop-center {
+    min-height: 89vh;
+    justify-content: center;
+    align-items: center;
 }

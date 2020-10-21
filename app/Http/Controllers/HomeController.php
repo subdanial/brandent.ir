@@ -58,6 +58,10 @@ class HomeController extends Controller
     {
         return view('webinar');
     }
+    public function consulting()
+    {
+        return view('consulting');
+    }
     public function post()
     {
         return view('post');
