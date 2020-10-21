@@ -7,10 +7,10 @@ bg-blue
 @endsection
 @section('content')
 <div data-barba="container"></div>
-<main class="signup h-100 ">
+<main class="signup ">
     
 
-    <section class="intro h-100">
+    <section class="intro">
         <div class="back">
             <a href="{{route('home')}}" data-barba-prevent="self">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -25,7 +25,7 @@ bg-blue
                 </svg>
             </a>
         </div>
-        <div class="container-fluid bg-white h-100  p-0">
+        <div class="container-fluid bg-white  p-0">
             <div class="row flex-row-reverse no-gutters">
                 <div class="js-background background d-none d-xl-block">
                     <img src="{{asset('img\signbanner.jpg')}}" alt="">
@@ -53,9 +53,9 @@ bg-blue
             </div>
         </div>
     </section>
-    <section class="plan h-100" style="display: none">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
+    <section class="plan " style="display: none">
+        <div class="container ">
+            <div class="row  align-items-center">
                 <div class="card-plan pb-4 my-4 my-lg-0 card card-body border-0">
                     <div class="d-flex pt-2 justify-content-between">
                         <h4 class="text-blue text-right font-weight-bolder ">پلن مورد نظر خود را انتخاب کنید</h4>
@@ -153,8 +153,8 @@ bg-blue
             </a>
         </div>
     </section>
-    <section class="info h-100" style="display: none;">
-        <div class="container bg-blue h-100">
+    <section class="info " style="display: none;">
+        <div class="container bg-blue">
           <div class="row row-cards bg-blue vh-100 d-flex justify-content-center align-items-center">
             <div class="col  bg-blue">
               <div class="card align-items-center w-100 rounded-0 p-5 ">
