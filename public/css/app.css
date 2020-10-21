@@ -771,4 +771,16 @@ body::-webkit-scrollbar-thumb {
     background: #030303;
   }
 }
+
+@media (min-width: 992px) {
+  .col-signup {
+    height: 100vh;
+  }
+  .row-plans {
+    height: 100vh;
+  }
+  .card-desktop {
+    height: 100vh;
+  }
+}
 /*# sourceMappingURL=app.css.map */

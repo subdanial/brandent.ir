@@ -55,7 +55,7 @@ bg-blue
     </section>
     <section class="plan " style="display: none">
         <div class="container ">
-            <div class="row  align-items-center">
+            <div class="row  align-items-center row-plans">
                 <div class="card-plan pb-4 my-4 my-lg-0 card card-body border-0">
                     <div class="d-flex pt-2 justify-content-between">
                         <h4 class="text-blue text-right font-weight-bolder ">پلن مورد نظر خود را انتخاب کنید</h4>
@@ -157,7 +157,7 @@ bg-blue
         <div class="container bg-blue">
           <div class="row row-cards bg-blue  d-flex justify-content-center align-items-center">
             <div class="col  bg-blue">
-              <div class="card align-items-center w-100 rounded-0 p-5 ">
+              <div class="card align-items-center card-desktop w-100 rounded-0 p-5 ">
                 <form action="{{route('payment')}}" method="POST" class="w-100 text-right">
                   @csrf
                   <input class="plan_amount" type="hidden" name="plan_amount">
