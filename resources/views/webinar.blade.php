@@ -153,9 +153,9 @@ bg-blue
             </a>
         </div>
     </section>
-    <section class="info " style="display: none;">
+    <section class="info" style="display: none;">
         <div class="container bg-blue">
-          <div class="row row-cards bg-blue vh-100 d-flex justify-content-center align-items-center">
+          <div class="row row-cards bg-blue  d-flex justify-content-center align-items-center">
             <div class="col  bg-blue">
               <div class="card align-items-center w-100 rounded-0 p-5 ">
                 <form action="{{route('payment')}}" method="POST" class="w-100 text-right">
