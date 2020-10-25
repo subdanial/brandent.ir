@@ -873,4 +873,9 @@ body::-webkit-scrollbar-thumb {
       -ms-flex-align: center;
           align-items: center;
 }
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
 /*# sourceMappingURL=app.css.map */
