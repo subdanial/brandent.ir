@@ -471,6 +471,11 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.blog .post img {
+  max-width: 100% !important;
+  height: inherit;
+}
+
 .blog .post .picture img {
   width: 100%;
   -o-object-fit: cover;
@@ -872,10 +877,5 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-img {
-  max-width: 100% !important;
-  height: auto !important;
 }
 /*# sourceMappingURL=app.css.map */
