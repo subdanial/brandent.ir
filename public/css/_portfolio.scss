@@ -1,0 +1,25 @@
+.works {
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+
+    img {
+        width: 100%;
+    }
+}
+
+@media(min-width:992px) {
+    .row-works{
+        padding-top: 1.6rem;
+        width: 80%;
+        margin:auto;
+    }
+    .works {
+        padding-right: 2.6rem;
+        padding-left: 2.6rem;
+
+
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,134 @@
+
+.loading {
+    opacity: 0;
+    pointer-events: none;
+    img {
+        height: 40px;
+    }
+
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    right: 0;
+    background-color: $orange;
+
+    .context {
+        margin-top: calc(50vh - 90px);
+    }
+
+    .dandoon img {
+        position: absolute;
+        right: 0;
+    }
+
+    .dandoon {
+        opacity: 1;
+        position: absolute;
+        margin-left: 0;
+        margin-left: -330px;
+        background-color: $orange;
+        height: 60px;
+        width: 400px;
+    }
+
+    .matn {
+        margin-left: 280px;
+
+    }
+
+    .matn img {
+        position: absolute;
+        opacity: 0;
+    }
+}
+
+@media(min-width:992px) {
+    .loading {
+        img {
+            height: 60px;
+        }
+
+        z-index: 1000;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top:0;
+        right: 0;
+        background-color: $orange;
+
+        .context {
+            margin-top: calc(50vh - 30px);
+        }
+
+        .dandoon img {
+            position: absolute;
+            right: 0;
+        }
+
+        .dandoon {
+            opacity: 1;
+            position: absolute;
+            margin-left: 0;
+            margin-left: -300px;
+            background-color: $orange;
+            height: 60px;
+            width: 400px;
+        }
+
+        .matn {
+            margin-left: 400px;
+
+        }
+
+        .matn img {
+            position: absolute;
+            opacity: 0;
+        }
+    }
+}
+
+
+.flash{
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+    background-color: $orange;
+    position: fixed;
+    top:0;
+    right: 0;
+    left:0;
+    bottom: 0;
+    .dandan{    
+        height: 48px;
+        width: 48px;
+        position: absolute;
+
+        img{
+            position: absolute;
+            height: 48px;
+            margin-right: -60px;
+        }
+    }
+    .dayere{
+        height: 100px;
+        width: 100px;
+        transform: scale(0);
+        position: absolute;
+        background-color: white;
+        border-radius: 100%;
+    }
+    .lamp{
+        position: absolute;
+        svg{
+        transform: scale(0);
+            height: 48px;
+            fill:white;
+        }
+    }
+
+}
