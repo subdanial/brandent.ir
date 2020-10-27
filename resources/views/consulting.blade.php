@@ -49,7 +49,7 @@ bg-black-mini
                             </div>
                             <div class="form-group">
                                 <label class="">ایمیل </label>
-                                <input type="email" class="form-control" name="email">
+                                <input type="text" class="form-control" name="email">
                             </div>
                         </div>
                         <div class="col-lg-6">
