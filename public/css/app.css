@@ -809,7 +809,7 @@ body::-webkit-scrollbar-thumb {
 
 .consulting-form .form-control {
   border: 1px solid #FF6600;
-  background-color: transparent;
+  background-color: transparent !important;
   color: white;
   border-radius: 0;
 }

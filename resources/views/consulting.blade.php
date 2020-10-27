@@ -31,219 +31,230 @@ bg-black-mini
             </div>
         </div>
     </div>
-    <div class="d-flex desktop-center">
-        
-        <section class="consulting-form position-relative">
-        
-    <h2 class="text-orange font-weight-bolder position-absolute">   فرم همکاری با برندنت</h2>
-         
+    <form action="{{route('consulting_store')}}" method="POST" id="consulting">
+        @csrf
+        <div class="d-flex desktop-center">
+            <section class="consulting-form position-relative">
+                <h2 class="text-orange font-weight-bolder position-absolute"> فرم همکاری با برندنت</h2>
+                <section class="step" data-order="1">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class=""> نام و نام خانوادگی * </label>
+                                <input type="text" class="form-control" name="fullname" required>
+                            </div>
+                            <div class="form-group">
+                                <label class=""> آیدی پیج اینستاگرامتون ( پیج کاری ) </label>
+                                <input type="text" class="form-control" name="instagram">
+                            </div>
+                            <div class="form-group">
+                                <label class="">ایمیل </label>
+                                <input type="email" class="form-control" name="email">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class=""> شماره موبایل * </label>
+                                <input type="number" class="form-control" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="">اگر وبسایت دارید </label>
+                                <input type="text" class="form-control  ltr" name="site" placeholder="http://">
+                            </div>
+                        </div>
+                    </div>
 
-            <section class="step" data-order="1">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="form-group">
-                            <label class=""> نام و نام خانوادگی * </label>
-                            <input type="text" class="form-control" name="fullname">
-                        </div>
-                        <div class="form-group">
-                            <label class=""> آیدی پیج اینستاگرامتون ( پیج کاری ) </label>
-                            <input type="text" class="form-control" name="instagram">
-                        </div>
-                        <div class="form-group">
-                            <label class="">ایمیل </label>
-                            <input type="email" class="form-control" name="email">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="form-group">
-                            <label class=""> شماره موبایل * </label>
-                            <input type="text" class="form-control" name="fullname">
-                        </div>
-                        <div class="form-group">
-                            <label class="">اگر وبسایت دارید </label>
-                            <input type="text" class="form-control  ltr" name="fullname" placeholder="http://">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="step" data-order="2">
-                <div class="row">
-                    <div class="col-12">
-                        <label class="text-orange d-block"> در چه حوزه ای فعالیت می کنید ؟ *</label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox">
-                            <label class="form-check-label" value="دندان پزشک">دندان پزشک</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox">
-                            <label class="form-check-label" value="پزشک">پزشک</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox">
-                            <label class="form-check-label" value="سرمایه گذار / مدیر کلینیک">سرمایه گذار / مدیر
-                                کلینیک</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox">
-                            <label class="form-check-label" value="سرمایه گذار / مدیر کلینیک">سرمایه گذار / مدیر
-                                کلینیک</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox">
-                            <label class="form-check-label" value="استارت آپ">استارت آپ</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox">
-                            <label class="form-check-label" value="فعالیت خارج از حوزه علوم پزشکی">فعالیت خارج از حوزه
-                                علوم پزشکی</label>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-3">
-                        <label class="text-orange d-block"> به دنبال دریافت چه خدماتی هستید ؟ *</label>
-                        <div class="clearfix"></div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label" value="مشاوره برندسازی شخصی / استارت آپ / ..">مشاوره
-                                        برندسازی شخصی / استارت آپ / ..</label>
-                                </div>
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"
-                                        value="طراحی هویت بصری برند ( لوگو ، سربرگ و .. )">طراحی هویت بصری برند ( لوگو ،
-                                        سربرگ و .. )</label>
-                                </div>
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label" value="برندسازی کامل مجموعه">برندسازی کامل
-                                        مجموعه</label>
-                                </div>
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label" value="طراحی و توسعه وبسایت و اپلیکیشن">طراحی و
-                                        توسعه وبسایت و اپلیکیشن</label>
-                                </div>
-                                <div class="form-check ">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label" value="طراحی داخلی مطب">طراحی داخلی مطب</label>
-                                </div>
+                </section>
+                <section class="step" data-order="2">
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="text-orange d-block"> در چه حوزه ای فعالیت می کنید ؟ *</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="دندان پزشک" name="activity[]">
+                                <label class="form-check-label" value="دندان پزشک">دندان پزشک</label>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label" value="طراحی داخلی مطب">طراحی داخلی مطب</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="پزشک" name="activity[]">
+                                <label class="form-check-label" value="پزشک">پزشک</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" value="سرمایه گذار / مدیر کلینیک" type="checkbox"
+                                    name="activity[]">
+                                <label class="form-check-label">سرمایه گذار / مدیر
+                                    کلینیک</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="سرمایه گذار / مدیر کلینیک"
+                                    name="activity[]">
+                                <label class="form-check-label">سرمایه گذار / مدیر
+                                    کلینیک</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="استارت آپ" name="activity[]">
+                                <label class="form-check-label">استارت آپ</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="فعالیت خارج از حوزه علوم پزشکی"
+                                    name="activity[]">
+                                <label class="form-check-label">فعالیت خارج از
+                                    حوزه
+                                    علوم پزشکی</label>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label class="text-orange d-block"> به دنبال دریافت چه خدماتی هستید ؟ *</label>
+                            <div class="clearfix"></div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-check ">
+                                        <input class="form-check-input" type="checkbox" name="services[]"
+                                            value="مشاوره برندسازی شخصی / استارت آپ ">
+                                        <label class="form-check-label">مشاوره برندسازی شخصی / استارت آپ / ..</label>
+                                    </div>
+                                    <div class="form-check ">
+                                        <input class="form-check-input" type="checkbox" name="services[]"
+                                            value="طراحی هویت بصری برند ( لوگو ، سربرگ و .. )">
+                                        <label class="form-check-label">طراحی هویت بصری برند (لوگو ،سربرگ و .. )</label>
+                                    </div>
+                                    <div class="form-check ">
+                                        <input class="form-check-input" type="checkbox" name="services[]"
+                                            value="برندسازی کامل مجموعه">
+                                        <label class="form-check-label" value="برندسازی کامل مجموعه">برندسازی کامل
+                                            مجموعه</label>
+                                    </div>
+                                    <div class="form-check ">
+                                        <input class="form-check-input" type="checkbox" name="services[]"
+                                            value="طراحی و توسعه وبسایت و اپلیکیشن">
+                                        <label class="form-check-label">طراحی و
+                                            توسعه وبسایت و اپلیکیشن</label>
+                                    </div>
+                                    <div class="form-check ">
+                                        <input class="form-check-input" type="checkbox" name="services[]"
+                                            value="طراحی داخلی مطب">
+                                        <label class="form-check-label">طراحی داخلی مطب</label>
+                                    </div>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label" value="آموزش نیروی شما برای شبکه های اجتماعی">آموزش
-                                        نیروی شما برای شبکه های اجتماعی</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label" value="عکاسی یا فیلم برداری">عکاسی یا فیلم
-                                        برداری</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label" value="ساخت موشن گرافی یا تیزر تبلیغاتی">ساخت موشن
-                                        گرافی یا تیزر تبلیغاتی</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label" value="کمپین تبلیغاتی">کمپین تبلیغاتی</label>
+                                <div class="col-lg-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="services[]"
+                                            value="طراحی داخلی مطب">
+                                        <label class="form-check-label">طراحی داخلی مطب</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="services[]"
+                                            value="آموزش نیروی شما برای شبکه های اجتماعی">
+                                        <label class="form-check-label">آموزش نیروی شما برای شبکه های اجتماعی</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="services[]"
+                                            value="عکاسی یا فیلم برداری">
+                                        <label class="form-check-label">عکاسی یا فیلم
+                                            برداری</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="services[]"
+                                            value="ساخت موشن گرافی یا تیزر تبلیغاتی">
+                                        <label class="form-check-label">ساخت
+                                            موشن
+                                            گرافی یا تیزر تبلیغاتی</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="services[]"
+                                            value="کمپین تبلیغاتی">
+                                        <label class="form-check-label">کمپین تبلیغاتی</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <label class="text-orange" name="about_you">درباره ی خودتان و فعالیتتون بنویسید *
-                                </label>
-                                <textarea name="" id="" cols="30" rows="5"></textarea>
-                            </div>
-                            <div class="col-lg-6">
-                                <label class="text-orange" name="about_work">اگر خدمتی جز موارد بالا در نظر داشتید
-                                    برامون بنویسید:</label>
-                                <textarea name="" id="" cols="30" rows="5"></textarea>
+                        <div class="col-12 mt-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label class="text-orange" name="about_you">درباره ی خودتان و فعالیتتون بنویسید *
+                                    </label>
+                                    <textarea name="" id="" cols="30" rows="5" name="about_activity"
+                                        required></textarea>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label class="text-orange" name="about_work">اگر خدمتی جز موارد بالا در نظر داشتید
+                                        برامون بنویسید:</label>
+                                    <textarea name="" id="" cols="30" rows="5" name="about_service"></textarea>
+                                </div>
                             </div>
                         </div>
-                    </div>
-            </section>
+                </section>
 
-            <section class="step" data-order="3">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <label for="" class="text-orange d-block"> آیا تا به حال با تیمی برای تبلیغات یا برندسازی کار
-                            کرده اید ؟ *</label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="option1">
-                            <label class="form-check-label" for="inlineRadio1">بله</label>
+                <section class="step" data-order="3">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label class="text-orange d-block"> آیا تا به حال با تیمی برای تبلیغات یا برندسازی
+                                کار
+                                کرده اید ؟ *</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="branded_before" value="yes">
+                                <label class="form-check-label">بله</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="branded_before" value="no">
+                                <label class="form-check-label">خیر</label>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label class="text-white">
+                                    اگر همکاری داشتید خوشحال میشیم بفرمایید با چه تیمی کار کردید و تجربه کاریتون چی بوده
+                                    ؟</label>
+                                <input type="text" class="form-control " name="branded_before_detail">
+                            </div>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="option2">
-                            <label class="form-check-label" for="inlineRadio2">خیر</label>
+                        <div class="col-lg-6">
+                            <label class="text-orange d-block"> تا به حال فالور فیک به صفحتان اضافه کرده اید ؟
+                                *</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="fake_follower" value="yes">
+                                <label class="form-check-label">بله</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="fake_follower" value="no">
+                                <label class="form-check-label">خیر</label>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label class="text-white">
+                                    تعداد فالور های صفحه شما</label>
+                                <input type="text" class="form-control " name="count_follower">
+                            </div>
                         </div>
-                        <div class="form-group mt-3">
-                            <label class="text-white">
-                                اگر همکاری داشتید خوشحال میشیم بفرمایید با چه تیمی کار کردید و تجربه کاریتون چی بوده
+                        <div class="col-12">
+                            <label class="text-orange d-block"> نظر شما راجع به نحوه جذب بیمار ( مخاطب ) چیست
                                 ؟</label>
-                            <input type="text" class="form-control " name="">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="conscience" value="no">
+                                <label class="form-check-label">جذب بیمار برایم مهم است ، روش آن خیلی مهم نیست</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="conscience" value="yes">
+                                <label class="form-check-label">در ابتدا به شان پزشکی فکر می کنم و جذب بیمار برایم در
+                                    اولویت
+                                    های بعدی است</label>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="form-group">
+                                <label class="text-orange d-block">انتظارات شما از همکاری با برندنت چیست ؟ *
+                                </label>
+
+                                <textarea class="form-control" name="expectation" rows="3" required></textarea>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <label for="" class="text-orange d-block"> تا به حال فالور فیک به صفحتان اضافه کرده اید ؟
-                            *</label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="option1">
-                            <label class="form-check-label" for="inlineRadio1">بله</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="option2">
-                            <label class="form-check-label" for="inlineRadio2">خیر</label>
-                        </div>
-                        <div class="form-group mt-3">
-                            <label class="text-white">
-                                تعداد فالور های صفحه شما</label>
-                            <input type="text" class="form-control " name="">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <label for="" class="text-orange d-block"> نظر شما راجع به نحوه جذب بیمار ( مخاطب ) چیست ؟</label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="option1">
-                            <label class="form-check-label">جذب بیمار برایم مهم است ، روش آن خیلی مهم نیست</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="option2">
-                            <label class="form-check-label">در ابتدا به شان پزشکی فکر می کنم و جذب بیمار برایم در اولویت های بعدی است</label>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <div class="form-group">
-                            <label for="" class="text-orange d-block">انتظارات شما از همکاری با برندنت چیست ؟  * </label>
-                        
-                          <textarea class="form-control" name="" id="" rows="3"></textarea>
-                        </div>
+                </section>
+                <div class="buttons mt-4">
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-orange text-white js-btn-submit" disabled>ثبت</button>
+                        <button type="button" class="btn btn-orange js-btn-next" disabled>بعدی</button>
+                        <button type="button" class="btn btn-outline-orange js-btn-back">قبلی</button>
                     </div>
                 </div>
             </section>
-            <div class="buttons mt-4">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-orange text-white js-btn-submit">ثبت</button>
-                    <button type="button" class="btn btn-orange js-btn-next">بعدی</button>
-                    <button type="button" class="btn btn-outline-orange js-btn-back">قبلی</button>
-                </div>
-            </div>
-        </section>
-    </div>
+        </div>
+    </form>
 
 </main>
 @endsection

@@ -322,29 +322,29 @@ $('.js-btn-to-info').click(function () {
 //end-signup
 
 var current_data_order = 1;
-step_monitor() ;
+step_monitor();
 
 function step_monitor() {
-  
+
     $('.step').each(function () {
         if ($(this).attr('data-order') == current_data_order) {
             $(this).show(0)
-        }else{
+        } else {
             $(this).hide(0)
         }
     })
 
 
-    if(current_data_order == 1){
+    if (current_data_order == 1) {
         $('.js-btn-back').hide();
-    }else{
+    } else {
         $('.js-btn-back').show();
     }
 
-    if(current_data_order == 3){
+    if (current_data_order == 3) {
         $('.js-btn-submit').show();
         $('.js-btn-next').hide();
-    }else{
+    } else {
         $('.js-btn-submit').hide();
         $('.js-btn-next').show();
 
@@ -355,11 +355,51 @@ function step_monitor() {
 
 $('.js-btn-next').click(function () {
     current_data_order++;
-    step_monitor() ;
+    step_monitor();
 
 })
 $('.js-btn-back').click(function () {
     current_data_order--;
-    step_monitor() ;
+    step_monitor();
+
+})
+
+
+
+$(document).on('change keyup keydown select click', '#consulting input , #consulting textarea , .btn , button', function () {
+    //1
+    if (current_data_order == 1) {
+        $('[data-order="1"] [required]').each(function () {
+            if ($(this).val().replace(/^\s+|\s+$/g, "").length == 0)
+                $('.js-btn-next').prop("disabled", true);
+            else
+                $('.js-btn-next').prop("disabled", false);
+        })
+    }
+    //2
+    if (current_data_order == 2) {
+        if ($("input[name='activity[]']").is(":checked") && $("input[name='services[]']").is(":checked")) {
+            $('[data-order="2"] [required]').each(function () {
+                if ($(this).val().replace(/^\s+|\s+$/g, "").length != 0) {
+                    $('.js-btn-next').prop("disabled", false);
+                } else {
+                    $('.js-btn-next').prop("disabled", true);
+                }
+            })
+        } else {
+            $('.js-btn-next').prop("disabled", true);
+        }
+    }
+    //3
+    if (current_data_order == 3) {
+      
+        if ( $("[name='branded_before']").is(":checked") && $("[name='fake_follower']").is(":checked") && $("[name='expectation']").val().replace(/^\s+|\s+$/g, "").length != 0) {
+            $('.js-btn-submit').prop("disabled", false);
+        } else {
+            $('.js-btn-submit').prop("disabled", true);
+        }
+
+
+    }
 
 })

@@ -28,6 +28,7 @@ Route::get('/webinar', 'HomeController@webinar')->name('webinar');
 Route::post('/payment', 'PaymentController@Payment')->name('payment');
 Route::get('/verify', 'PaymentController@verify')->name('verify');
 
+Route::post('/consulting/store', 'ConsultingController@store')->name('consulting_store');
 
 
 Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
