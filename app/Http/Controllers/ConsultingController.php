@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\consulting;
+use App\Consulting;
 use Illuminate\Http\Request;
 
 class ConsultingController extends Controller
@@ -33,9 +33,27 @@ class ConsultingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Consulting $consulting, Request $request)
     {
-        dd($request);
+     
+        Consulting::create([
+            'fullname' => $request->get('fullname'),
+            'instagram' => $request->get('instagram'),
+            'email' => $request->get('email'),
+            'phone' => $request->get('phone'),
+            'site' => $request->get('site'),
+            'activity' => json_encode($request->get('activity')),
+            'services' => json_encode($request->get('services')),
+            'about_you' => $request->get('about_you'),
+            'about_work' => $request->get('about_work'),
+            'branded_before' => $request->get('branded_before'),
+            'branded_before_detail' => $request->get('branded_before_detail'),
+            'fake_follower' => $request->get('fake_follower'),
+            'count_follower' => $request->get('count_follower'),
+            'conscience' => $request->get('conscience'),
+            'expectation' => $request->get('expectation')
+        ]);
+        return view('consulting_alert');
     }
 
     /**
@@ -44,7 +62,7 @@ class ConsultingController extends Controller
      * @param  \App\consulting  $consulting
      * @return \Illuminate\Http\Response
      */
-    public function show(consulting $consulting)
+    public function show(Consulting $consulting)
     {
         //
     }
@@ -55,7 +73,7 @@ class ConsultingController extends Controller
      * @param  \App\consulting  $consulting
      * @return \Illuminate\Http\Response
      */
-    public function edit(consulting $consulting)
+    public function edit(Consulting $consulting)
     {
         //
     }
@@ -67,7 +85,7 @@ class ConsultingController extends Controller
      * @param  \App\consulting  $consulting
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, consulting $consulting)
+    public function update(Request $request, Consulting $consulting)
     {
         //
     }
@@ -78,7 +96,7 @@ class ConsultingController extends Controller
      * @param  \App\consulting  $consulting
      * @return \Illuminate\Http\Response
      */
-    public function destroy(consulting $consulting)
+    public function destroy(Consulting $consulting)
     {
         //
     }

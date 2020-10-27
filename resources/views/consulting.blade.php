@@ -169,15 +169,14 @@ bg-black-mini
                         <div class="col-12 mt-4">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <label class="text-orange" name="about_you">درباره ی خودتان و فعالیتتون بنویسید *
+                                    <label class="text-orange">درباره ی خودتان و فعالیتتون بنویسید *
                                     </label>
-                                    <textarea name="" id="" cols="30" rows="5" name="about_activity"
-                                        required></textarea>
+                                    <textarea name="about_you" id="" cols="30" rows="5" required></textarea>
                                 </div>
                                 <div class="col-lg-6">
-                                    <label class="text-orange" name="about_work">اگر خدمتی جز موارد بالا در نظر داشتید
+                                    <label class="text-orange">اگر خدمتی جز موارد بالا در نظر داشتید
                                         برامون بنویسید:</label>
-                                    <textarea name="" id="" cols="30" rows="5" name="about_service"></textarea>
+                                    <textarea  name="about_work" cols="30" rows="5" name="about_service"></textarea>
                                 </div>
                             </div>
                         </div>
