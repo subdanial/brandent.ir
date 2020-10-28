@@ -30,6 +30,8 @@ Route::get('/verify', 'PaymentController@verify')->name('verify');
 
 Route::post('/consulting/store', 'ConsultingController@store')->name('consulting_store');
 
+Route::get('/signedups', 'PaymentController@index')->name('signedups');
+Route::get('/helps', 'ConsultingController@index')->name('helps');
 
 Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
     Route::Post('/upload','UploadController@upload')->name('upload');

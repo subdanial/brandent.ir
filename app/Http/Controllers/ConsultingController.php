@@ -14,7 +14,8 @@ class ConsultingController extends Controller
      */
     public function index()
     {
-        //
+        $consultings = Consulting::All();
+        return view('helps', compact('consultings'));
     }
 
     /**
@@ -35,7 +36,7 @@ class ConsultingController extends Controller
      */
     public function store(Consulting $consulting, Request $request)
     {
-     
+
         Consulting::create([
             'fullname' => $request->get('fullname'),
             'instagram' => $request->get('instagram'),

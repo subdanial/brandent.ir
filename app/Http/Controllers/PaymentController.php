@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Payment;
@@ -9,6 +10,11 @@ use SoapClient;
 
 class PaymentController extends Controller
 {
+    function index()
+    {
+        $payments = Payment::All();
+        return view('signedups', compact('payments'));
+    }
     function Payment(Request $request)
     {
         $validatedData = $request->validate([
@@ -27,7 +33,7 @@ class PaymentController extends Controller
         $phone = $request['phone'];
         $code = $request['code'];
         $plan_amount = $request['plan_amount'];
-        
+
         $plan_amount =  $plan_amount * 1000;
 
         // $plan_amount =  1000;
@@ -38,7 +44,7 @@ class PaymentController extends Controller
         $Description = 'پرداخت';
         $Email = $email;
         $Mobile = $phone;
-        $CallbackURL = url('/')."/verify?amount=" . $plan_amount . "&name=" . $name . "&lastname=" . $lastname . "&email=" . $email . "&password=" . $password . "&phone=" . $phone . "&code=" . $code;
+        $CallbackURL = url('/') . "/verify?amount=" . $plan_amount . "&name=" . $name . "&lastname=" . $lastname . "&email=" . $email . "&password=" . $password . "&phone=" . $phone . "&code=" . $code;
         $client = new SoapClient('https://www.zarinpal.com/pg/services/WebGate/wsdl', ['encoding' => 'UTF-8']);
         $result = $client->PaymentRequest(
             [
@@ -53,11 +59,10 @@ class PaymentController extends Controller
         // dd($CallbackURL);
         if ($result->Status == 100) {
             if (Payment::where('email', '=', $email)->exists()) {
-                return view('Payment_error',['error'=>'ایمیل قبلا ثبت شده است']);
-            } 
-            elseif(Payment::where('phone', '=', $phone)->exists()){      
-                return view('Payment_error',['error'=>'شماره تماس قبلا ثبت شده است']);
-            }else{
+                return view('Payment_error', ['error' => 'ایمیل قبلا ثبت شده است']);
+            } elseif (Payment::where('phone', '=', $phone)->exists()) {
+                return view('Payment_error', ['error' => 'شماره تماس قبلا ثبت شده است']);
+            } else {
                 return redirect()->to('https://www.zarinpal.com/pg/StartPay/' . $result->Authority);
             }
         } else {
@@ -92,20 +97,18 @@ class PaymentController extends Controller
                 $payment->code = $request->code;
                 $payment->save();
 
-                $email= $request->email;
+                $email = $request->email;
                 $phone = $request->phone;
                 $password = $request->password;
 
-                return view('Payment_verified_info',compact('email','phone','password'));
-
+                return view('Payment_verified_info', compact('email', 'phone', 'password'));
             } else {
                 // Payment nashod error = $result->Status;
-                return view('Payment_error',['error'=>'پرداخت با مشکل رو به رو شده است']);
+                return view('Payment_error', ['error' => 'پرداخت با مشکل رو به رو شده است']);
             }
         } else {
-                //user cancel kard kolan Payment
-            return view('Payment_error',['error'=>'پرداخت کنسل شد']);
-
+            //user cancel kard kolan Payment
+            return view('Payment_error', ['error' => 'پرداخت کنسل شد']);
         }
     }
 }
