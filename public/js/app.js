@@ -408,7 +408,7 @@ $(document).on('change keyup keydown select click', '#consulting input , #consul
 
 $(document).on('click','.js-btn-off',function(){
     var offer_value = $('.js-input-off').val();
-    if(offer_value == ""){
+    if(offer_value == "brnd25"){
         $('.js-btn-to-info').each(function(){
             $(this).attr('data-value' , Math.round($(this).attr('data-value') * 0.75));
             $('.label_price[data-plan="'+$(this).attr('data-plan')+'"]').html($(this).attr('data-value'));
