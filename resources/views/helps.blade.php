@@ -66,7 +66,7 @@
                 <td>{{$consulting->email}}</td>
                 <td>{!! utf8_encode($consulting->site) !!}</td>
                 <td>{{$consulting->activity}}</td>
-                <td>{!!utf8_encode($consulting->services) !!}</td>
+                <td>{!!utf8_decode($consulting->services) !!}</td>
                 <td>{{$consulting->about_you}}</td>
                 <td>{{$consulting->about_work}}</td>
                 <td>{{$consulting->branded_before}}</td>
