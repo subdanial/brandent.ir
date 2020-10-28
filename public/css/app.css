@@ -878,4 +878,8 @@ body::-webkit-scrollbar-thumb {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.btn-off {
+  height: 36px;
+}
 /*# sourceMappingURL=app.css.map */
