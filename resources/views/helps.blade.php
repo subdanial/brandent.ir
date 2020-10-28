@@ -64,7 +64,7 @@
                 <td>{{$consulting->fullname}}</td>
                 <td>{{$consulting->instagram}}</td>
                 <td>{{$consulting->email}}</td>
-                <td>{!!utf8_decode($consulting->site)!!}</td>
+                <td>{!!utf8_encode($consulting->site)!!}</td>
                 <td>{{$consulting->activity}}</td>
                 <td>{{$consulting->services}}</td>
                 <td>{{$consulting->about_you}}</td>
