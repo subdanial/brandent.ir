@@ -1,7 +1,7 @@
 /node_modules
 /public/node_modules
 /public/upload
-/public/filemanager
+/public/filemanager/uploads
 /public/storage
 /storage/*.key
 /vendor
