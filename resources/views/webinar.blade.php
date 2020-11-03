@@ -79,11 +79,11 @@ bg-blue
         <div class="container-fluid bg-white  p-0">
             <div class="row flex-row-reverse no-gutters">
                 <div class="js-background background d-none d-xl-block">
-                    <img src="{{asset('img\signbanner.jpg')}}" alt="">
+                    <img src="{{asset('img\signbanner2.jpg')}}" alt="">
                 </div>
                 <div class="col-12 d-xl-none">
                     <div class="background">
-                        <img src="{{asset('img\signbanner.jpg')}}" alt="">
+                        <img src="{{asset('img\signbanner2.jpg')}}" alt="">
                     </div>
                 </div>
                 <div class="col-signup bg-white js-signup-col">
