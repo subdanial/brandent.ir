@@ -39,7 +39,7 @@ bg-black-mini
 
         <div class="row no-gutters">
 
-            <div class="order-1 order-lg-0 col-lg-6 col-12">
+            <div class="order-1 order-lg-0 col-lg-7 col-12">
 
 
                 <div class="row  mx-auto justify-content-center contact-items">
@@ -127,7 +127,7 @@ bg-black-mini
 
 
             </div>
-            <div class="order-0 order-lg-1 col-lg-6 col-12">
+            <div class="order-0 order-lg-1 col-lg-5 col-12">
                 <div id="map"></div>
             </div>
         </div>
