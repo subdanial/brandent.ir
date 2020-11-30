@@ -52,7 +52,7 @@ bg-black-mini
             <div class="title text-right ">برند سازی برای پزشکان</div>
             <div class="sub-title text-right ">داستان خود را آغاز کنید..</div>
             <div class="buttons text-right mt-2">
-                <a href="{{route('webinar')}}" class="btn btn-orange ml-1" data-barba-prevent="self">ثبت نام در سمپوزیم</a>
+                <a href="https://shop.brandent.ir/product-category/%d9%88%d8%a8%db%8c%d9%86%d8%a7%d8%b1%d9%87%d8%a7%db%8c-%d8%a2%d9%85%d9%88%d8%b2%d8%b4%db%8c/" class="btn btn-orange ml-1" data-barba-prevent="self">ثبت نام در وبینارها</a>
                 <a href="{{route('consulting')}}" class="btn btn-outline-orange"  data-barba-prevent="self">فرم دریافت مشاوره</a>
             </div>
         </div>
