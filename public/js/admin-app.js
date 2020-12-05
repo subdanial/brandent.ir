@@ -147,7 +147,7 @@ $('#table-post').DataTable({
     processing: true,
     serverSide: true,
     ajax: {
-        url: 'http://'+location.host+"/admin/post/table",
+        url: 'https://'+location.host+"/admin/post/table",
     },
     columns: [{
             class: "align-middle",
@@ -207,7 +207,7 @@ $('#table-category').DataTable({
     processing: true,
     serverSide: true,
     ajax: {
-        url: 'http://'+location.host+"/admin/category/table",
+        url: 'https://'+location.host+"/admin/category/table",
     },
     columns: [
         {
@@ -252,7 +252,7 @@ $('#table-work').DataTable({
     processing: true,
     serverSide: true,
     ajax: {
-        url: 'http://'+location.host+"/admin/work/table",
+        url: 'https://'+location.host+"/admin/work/table",
     },
     columns: [
         {
@@ -303,7 +303,7 @@ $('#table-teammate').DataTable({
     processing: true,
     serverSide: true,
     ajax: {
-        url: 'http://'+location.host+"/admin/team/table",
+        url: 'https://'+location.host+"/admin/team/table",
     },
     columns: [
         {
